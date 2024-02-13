@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  root "events#index"
-
+  root "events#index"  
+  
+  
+  resources :users, only: %i[ show edit update]
   resources :events
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
